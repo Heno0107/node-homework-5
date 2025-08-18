@@ -1,0 +1,162 @@
+[
+    {
+        "id": "1",
+        "name": "Alice Johnson",
+        "age": 29,
+        "email": "alice.johnson@example.com",
+        "password": "pass1234",
+        "LoggedIn": false
+    },
+    {
+        "id": "2",
+        "name": "Bob Smith",
+        "age": 34,
+        "email": "bob.smith@example.com",
+        "password": "securepass1",
+        "LoggedIn": false
+    },
+    {
+        "id": "3",
+        "name": "Carol White",
+        "age": 27,
+        "email": "carol.white@example.com",
+        "password": "carolpw2021",
+        "LoggedIn": false
+    },
+    {
+        "id": "4",
+        "name": "David Brown",
+        "age": 45,
+        "email": "david.brown@example.com",
+        "password": "dbrown$456",
+        "LoggedIn": false
+    },
+    {
+        "id": "5",
+        "name": "Emily Davis",
+        "age": 31,
+        "email": "emily.davis@example.com",
+        "password": "edavis!pass",
+        "LoggedIn": false
+    },
+    {
+        "id": "6",
+        "name": "Frank Moore",
+        "age": 38,
+        "email": "frank.moore@example.com",
+        "password": "frankie38",
+        "LoggedIn": false
+    },
+    {
+        "id": "7",
+        "name": "Grace Taylor",
+        "age": 26,
+        "email": "grace.taylor@example.com",
+        "password": "grace@123",
+        "LoggedIn": false
+    },
+    {
+        "id": "8",
+        "name": "Henry Wilson",
+        "age": 40,
+        "email": "henry.wilson@example.com",
+        "password": "hwl2020!",
+        "LoggedIn": false
+    },
+    {
+        "id": "9",
+        "name": "Ivy Martinez",
+        "age": 22,
+        "email": "ivy.martinez@example.com",
+        "password": "ivymartinez22",
+        "LoggedIn": false
+    },
+    {
+        "id": "10",
+        "name": "Jack Anderson",
+        "age": 36,
+        "email": "jack.anderson@example.com",
+        "password": "jackrules",
+        "LoggedIn": false
+    },
+    {
+        "id": "11",
+        "name": "Karen Thomas",
+        "age": 33,
+        "email": "karen.thomas@example.com",
+        "password": "karenTpass",
+        "LoggedIn": false
+    },
+    {
+        "id": "12",
+        "name": "Liam Jackson",
+        "age": 28,
+        "email": "liam.jackson@example.com",
+        "password": "liamSecure",
+        "LoggedIn": false
+    },
+    {
+        "id": "13",
+        "name": "Mia Lee",
+        "age": 24,
+        "email": "mia.lee@example.com",
+        "password": "mialee24",
+        "LoggedIn": false
+    },
+    {
+        "id": "14",
+        "name": "Noah Harris",
+        "age": 41,
+        "email": "noah.harris@example.com",
+        "password": "noahH411",
+        "LoggedIn": false
+    },
+    {
+        "id": "15",
+        "name": "Olivia Clark",
+        "age": 30,
+        "email": "olivia.clark@example.com",
+        "password": "ocpassword",
+        "LoggedIn": false
+    },
+    {
+        "id": "16",
+        "name": "Paul Lewis",
+        "age": 35,
+        "email": "paul.lewis@example.com",
+        "password": "plewis123",
+        "LoggedIn": false
+    },
+    {
+        "id": "17",
+        "name": "Quinn Walker",
+        "age": 37,
+        "email": "quinn.walker@example.com",
+        "password": "qwpass2025",
+        "LoggedIn": false
+    },
+    {
+        "id": "18",
+        "name": "Rachel Young",
+        "age": 23,
+        "email": "rachel.young@example.com",
+        "password": "rachelY23",
+        "LoggedIn": false
+    },
+    {
+        "id": "19",
+        "name": "Samuel Hall",
+        "age": 39,
+        "email": "samuel.hall@example.com",
+        "password": "samHall_2023",
+        "LoggedIn": false
+    },
+    {
+        "id": "20",
+        "name": "Tina Allen",
+        "age": 32,
+        "email": "tina.allen@example.com",
+        "password": "tinaA!2025",
+        "LoggedIn": false
+    }
+]

@@ -3,7 +3,7 @@ const path = require('path')
 
 const readFile = async (req , res , next) => {
     try {
-        const users = JSON.parse(await fs.readFile(path.join(__dirname , '..' , 'users' , 'users.json') , 'utf-8'))
+        const users = JSON.parse(await fs.readFile(path.join(__dirname , '..' , 'db' , 'users.json') , 'utf-8'))
         res.locals.users = users
         next()
     } catch (err) {
