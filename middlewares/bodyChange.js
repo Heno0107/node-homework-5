@@ -8,11 +8,8 @@ const bodyChange = (req , res , next) => {
                 error : error.details
             })
         }
-        const { name , age , email , password} = value
+        const { name , age , email , password , role} = value
         const { users } = res.locals
-        users.forEach((user) => {
-            user.LoggedIn = false
-        })
         let filteredName = name.toLowerCase().split('')
         filteredName[0] = filteredName[0].toUpperCase()
         filteredName = filteredName.join('')
@@ -22,7 +19,8 @@ const bodyChange = (req , res , next) => {
             age ,
             email ,
             password ,
-            LoggedIn : false
+            loggedIn : false ,
+            role : role.toLowerCase()
         }
         next()
     } catch (error) {

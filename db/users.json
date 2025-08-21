@@ -5,7 +5,8 @@
         "age": 29,
         "email": "alice.johnson@example.com",
         "password": "pass1234",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "2",
@@ -13,7 +14,8 @@
         "age": 34,
         "email": "bob.smith@example.com",
         "password": "securepass1",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "3",
@@ -21,7 +23,8 @@
         "age": 27,
         "email": "carol.white@example.com",
         "password": "carolpw2021",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "4",
@@ -29,7 +32,8 @@
         "age": 45,
         "email": "david.brown@example.com",
         "password": "dbrown$456",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "5",
@@ -37,7 +41,8 @@
         "age": 31,
         "email": "emily.davis@example.com",
         "password": "edavis!pass",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "6",
@@ -45,7 +50,8 @@
         "age": 38,
         "email": "frank.moore@example.com",
         "password": "frankie38",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "7",
@@ -53,7 +59,8 @@
         "age": 26,
         "email": "grace.taylor@example.com",
         "password": "grace@123",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "8",
@@ -61,7 +68,8 @@
         "age": 40,
         "email": "henry.wilson@example.com",
         "password": "hwl2020!",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "admin"
     },
     {
         "id": "9",
@@ -69,7 +77,8 @@
         "age": 22,
         "email": "ivy.martinez@example.com",
         "password": "ivymartinez22",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "10",
@@ -77,7 +86,8 @@
         "age": 36,
         "email": "jack.anderson@example.com",
         "password": "jackrules",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "11",
@@ -85,7 +95,8 @@
         "age": 33,
         "email": "karen.thomas@example.com",
         "password": "karenTpass",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "12",
@@ -93,7 +104,8 @@
         "age": 28,
         "email": "liam.jackson@example.com",
         "password": "liamSecure",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "13",
@@ -101,7 +113,8 @@
         "age": 24,
         "email": "mia.lee@example.com",
         "password": "mialee24",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "14",
@@ -109,7 +122,8 @@
         "age": 41,
         "email": "noah.harris@example.com",
         "password": "noahH411",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "15",
@@ -117,7 +131,8 @@
         "age": 30,
         "email": "olivia.clark@example.com",
         "password": "ocpassword",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "16",
@@ -125,7 +140,8 @@
         "age": 35,
         "email": "paul.lewis@example.com",
         "password": "plewis123",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "17",
@@ -133,7 +149,8 @@
         "age": 37,
         "email": "quinn.walker@example.com",
         "password": "qwpass2025",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "18",
@@ -141,7 +158,8 @@
         "age": 23,
         "email": "rachel.young@example.com",
         "password": "rachelY23",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "admin"
     },
     {
         "id": "19",
@@ -149,7 +167,8 @@
         "age": 39,
         "email": "samuel.hall@example.com",
         "password": "samHall_2023",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     },
     {
         "id": "20",
@@ -157,6 +176,7 @@
         "age": 32,
         "email": "tina.allen@example.com",
         "password": "tinaA!2025",
-        "LoggedIn": false
+        "loggedIn": false,
+        "role": "user"
     }
 ]

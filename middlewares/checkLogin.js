@@ -10,12 +10,18 @@ const checkLogin = (req , res , next) => {
             })
         }
         const user = users.find((user) => user.email === value.email)
+        const loggedIn = users.find((user) => user.loggedIn)
+        if (loggedIn) {
+            return res.status(400).json({
+                message : "You're already logged in"
+            })
+        }
         if(user) {
             if(user.password === value.password) {
-                user.LoggedIn = true
+                user.loggedIn = true
                 users.forEach((u) => {
                     if(u.id === user.id) {
-                        u.LoggedIn = true
+                        u.loggedIn = true
                     }
                 })
                 res.locals.user = user

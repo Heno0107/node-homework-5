@@ -14,9 +14,12 @@ const schema = joi.object({
     password : joi.string()
         .min(5)
         .max(20)
-        .pattern(new RegExp('^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).+$')) 
+        .pattern(new RegExp('^(?=.*[A-Z])(?=.*[_!@#$%^&*(),.?":{}|<>]).+$')) 
         .required() ,
-    repeat_password : joi.ref('password')
+    repeat_password : joi.ref('password') ,
+    role : joi.string()
+        .pattern(/^(admin|user)$/i)
+        .required()
 })
 
 module.exports = {

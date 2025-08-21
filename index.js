@@ -3,17 +3,18 @@ const path = require('path')
 const {response} = require('./helpers/response')
 const { router } = require('./routes')
 const { usersRouter } = require('./routes/users')
-const { registerRouter } = require('./routes/register')
-const { loginRouter } = require('./routes/login')
-const { logoutRouter } = require('./routes/logout')
+const { registerRouter , loginRouter , logoutRouter } = require('./routes/auth')
+const { productsRouter } = require('./routes/products')
 
 const app = express()
 
 app.use(express.json())
 
-app.use('' , router)
+app.use('/' , router)
 
 app.use('/api' , usersRouter)
+
+app.use('/api' , productsRouter)
 
 app.use('/api/users' , registerRouter)
 
