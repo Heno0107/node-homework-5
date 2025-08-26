@@ -5,10 +5,11 @@ const path = require('path')
 const router = express.Router()
 
 router.get('' , (req , res) => {
-    response(res , 'text/html' , 200)
-    res.sendFile(path.join(__dirname , '..' , 'pages' , 'index.html'))
+    res.status(200).render( 'index' , {title : "Home"})
 })
 
 module.exports = {
     router
 }
+
+//path.join(__dirname , '..' , 'view' , 'index.ejs')

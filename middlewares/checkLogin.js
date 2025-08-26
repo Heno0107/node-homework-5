@@ -1,6 +1,6 @@
 const { loginSchema } = require("../schema/loginSchema");
-
-const checkLogin = (req , res , next) => {
+const bcrypt = require('bcryptjs')
+const checkLogin = async (req , res , next) => {
     try {
         const {users} = res.locals
         const { value , error} = loginSchema.validate(req.body)
@@ -17,7 +17,7 @@ const checkLogin = (req , res , next) => {
             })
         }
         if(user) {
-            if(user.password === value.password) {
+            if(await bcrypt.compare(value.password , user.password)) {
                 user.loggedIn = true
                 users.forEach((u) => {
                     if(u.id === user.id) {

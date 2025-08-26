@@ -1,6 +1,7 @@
 const { schema } = require("../schema/registerSchema")
+const bcrypt = require('bcryptjs')
 
-const bodyChange = (req , res , next) => {
+const bodyChange = async (req , res , next) => {
     try {
         const { value , error} = schema.validate(req.body)
         if (error) {
@@ -18,7 +19,7 @@ const bodyChange = (req , res , next) => {
             name : filteredName ,
             age ,
             email ,
-            password ,
+            password : await bcrypt.hash(password , 10) ,
             loggedIn : false ,
             role : role.toLowerCase()
         }

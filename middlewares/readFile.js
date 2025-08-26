@@ -9,7 +9,7 @@ const readFile = async (req , res , next) => {
         res.locals.products = products
         next()
     } catch (err) {
-       res.status(404).sendFile(path.join(__dirname , '..' , 'pages' , 'error.html'))
+       res.status(404).render('error')
     }
 }
 

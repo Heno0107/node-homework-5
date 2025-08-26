@@ -32,7 +32,7 @@ usersRouter.get('/users/:id' , readFile , async (req , res) => {
         res.json(user)
     } else {
         response(res , 'text/html' , 404)
-        res.sendFile(path.join(__dirname , 'pages' , 'error.html'))
+        res.render('error')
     }
 })
 
