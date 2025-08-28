@@ -8,11 +8,13 @@
 <body>
     <h1><%=title  %></h1>
 
-    <form action="/api/users/login" method="post">
+    <form action="/auth/login" method="post">
         <input type="email" placeholder="Email" name="email">
         <input type="password" placeholder="Password" name="password">
-        <button type="submit">Register</button>
-        <button type="reset">Reset All</button>
+        <button type="submit">LogIn</button>
+        <button type="reset">Reset</button>
+        <p>Not registered yet?</p>
+        <a href="/auth/register">Create an account</a>
     </form>
 </body>
 </html>

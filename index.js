@@ -1,10 +1,9 @@
 const express = require('express')
-const path = require('path')
-const {response} = require('./helpers/response')
 const { router } = require('./routes')
 const { usersRouter } = require('./routes/users')
 const { authRouter } = require('./routes/auth')
-const { productsRouter } = require('./routes/products')
+const { UsersService } = require('./services/UsersService')
+const { AuthService } = require('./services/AuthService')
 
 const app = express()
 
@@ -16,17 +15,19 @@ app.use(express.json())
 
 app.use(express.urlencoded())
 
+app.locals.services = {
+    users : new UsersService() ,
+    auth : new AuthService()
+}
+
 app.use('/' , router)
 
 app.use('/api' , usersRouter)
 
-app.use('/api' , productsRouter)
-
-app.use('/api/users' , authRouter)
+app.use('/auth' , authRouter)
 
 app.use((req , res) => {
-    response(res , 'text/html' , 404)
-    res.render('error' , {title : "Home"})
+    res.status(404).render('error' , {title : "Home"})
 })
 
 app.listen(3000 , (err) => {

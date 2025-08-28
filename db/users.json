@@ -178,5 +178,14 @@
     "password": "$2b$10$WTTpEyA6IoR3JmX9YX.VTuIVIrh5FqntT2SeBooM9nzi2iUc06Ilq",
     "loggedIn": false,
     "role": "user"
+  },
+  {
+    "id": "21",
+    "name": "Heno",
+    "age": 20,
+    "email": "henripetrosyan47@gmail.com",
+    "password": "$2b$10$nypJDAtmbSecPsUUifLMf.pWPbX1TlUOqujogvURttE09naKWPQau",
+    "loggedIn": false,
+    "role": "user"
   }
 ]

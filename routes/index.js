@@ -1,12 +1,11 @@
 const express = require('express')
-const { response } = require('../helpers/response')
-const path = require('path')
+const { HomeController } = require('../controllers/HomeController')
+
+const homeController = new HomeController()
 
 const router = express.Router()
 
-router.get('' , (req , res) => {
-    res.status(200).render( 'index' , {title : "Home"})
-})
+router.get('' , homeController.getHome)
 
 module.exports = {
     router

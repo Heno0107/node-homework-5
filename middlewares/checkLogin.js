@@ -1,5 +1,6 @@
 const { loginSchema } = require("../schema/loginSchema");
 const bcrypt = require('bcryptjs')
+
 const checkLogin = async (req , res , next) => {
     try {
         const {users} = res.locals
