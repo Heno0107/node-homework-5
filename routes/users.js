@@ -1,18 +1,18 @@
 const express = require('express')
-const { readFile , checkUser, checkBody } = require('../middlewares')
+const { checkUser, checkBody } = require('../middlewares')
 const { UsersController } = require('../controllers/UsersController')
 
 const usersRouter = express.Router()
 
 const usersController = new UsersController()
 
-usersRouter.get('/users' , readFile , usersController.getUsers)
+usersRouter.get('/users' , usersController.getUsers)
 
-usersRouter.get('/users/:id' , readFile , usersController.getUser)
+usersRouter.get('/users/:id' , usersController.getUser)
 
-usersRouter.patch('/users/:id' , [readFile , checkUser , checkBody] , usersController.patchUser)
+// usersRouter.patch('/users/:id' , [checkUser , checkBody] , usersController.patchUser)
 
-usersRouter.delete('/users/:id' , [readFile , checkUser] , usersController.deleteUser)
+// usersRouter.delete('/users/:id' , [checkUser] , usersController.deleteUser)
 
 module.exports = {
     usersRouter

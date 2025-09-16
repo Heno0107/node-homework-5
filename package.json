@@ -12,7 +12,8 @@
     "bcryptjs": "^3.0.2",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "joi": "^18.0.0"
+    "joi": "^18.0.0",
+    "mongodb": "^6.19.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
