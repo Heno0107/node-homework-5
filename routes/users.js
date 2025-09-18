@@ -10,7 +10,7 @@ usersRouter.get('/users' , usersController.getUsers)
 
 usersRouter.get('/users/:id' , usersController.getUser)
 
-// usersRouter.patch('/users/:id' , [checkUser , checkBody] , usersController.patchUser)
+usersRouter.patch('/users/:id' , [checkUser , checkBody] , usersController.patchUser)
 
 // usersRouter.delete('/users/:id' , [checkUser] , usersController.deleteUser)
 

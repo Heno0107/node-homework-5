@@ -1,46 +1,34 @@
-const fs = require('fs').promises
-const path = require('path')
-const { connectDb , getDb } = require('../db')
-const { ObjectId } = require('mongodb')
-
-let myDb
-
-connectDb(() => {
-    myDb = getDb()
-})
-
 class UsersService {
+    constructor (models) {
+        this.models = models
+    }
     async getUsers (query) {
         const { name , age } = query
-        let filteredUsers = await myDb.collection('users').find()
+        let filteredUsers = await this.models.users.find()
         if (name) {
-            filteredUsers = await myDb.collection('users').find({name : name})
+            filteredUsers = await this.models.users.find({name : name})
         }
         if (age) {
             if (age.toLowerCase() === 'min') {
-                filteredUsers = await myDb.collection('users').find().sort({age : 1})
+                filteredUsers = await this.models.users.find().sort({age : 1})
             } else if (age.toLowerCase() === 'max') {
-                filteredUsers = await myDb.collection('users').find().sort({age : -1})
+                filteredUsers = await this.models.users.find().sort({age : -1})
             }
         }
-        return filteredUsers.toArray()
+        return filteredUsers
     }
     async getUser (id) {
-        const user = myDb.collection('users').findOne({_id : new ObjectId(id)})
+        const user = this.models.users.findById(id)
         return user
     }
-    // async patchUser (users , user , body) {
-    //     Object.assign(user , body)
-    //     await fs.unlink(path.join(__dirname , '..' , 'db' , 'users.json'))
-    //     await fs.appendFile(path.join(__dirname , '..' , 'db' , 'users.json') , JSON.stringify(users , null , 2))
-    //     return users
-    // }
-    // async deleteUser (users , id) {
-    //     const filteredUsers = users.filter((user) => user.id !== id)
-    //     await fs.unlink(path.join(__dirname , '..' , 'db' , 'users.json'))
-    //     await fs.appendFile(path.join(__dirname , '..' , 'db' , 'users.json') , JSON.stringify(filteredUsers , null , 2))
-    //     return filteredUsers
-    // }
+    async patchUser (user , body) {
+        const updatedUser = this.models.users(body)
+        await this.models.users.findOneAndUpdate({_id : user._id}, updatedUser , {new : true})
+    }
+    async deleteUser (id) {
+        const deletedUser = await this.models.users.findOneAndDelete({_id : id} , {new : true})
+        return deletedUser
+    }
 }
 
 module.exports = {

@@ -6,9 +6,15 @@ class AuthController {
         res.status(200).render('login' , {title : "Login"})
     }
     async register (req , res) {
-        const { body } = res.locals
-        await req.app.locals.services.auth.register(body)
-        res.status(200).redirect('/auth/login')
+        try {
+            const { body } = res.locals
+            await req.app.locals.services.auth.register(body)
+            res.status(200).redirect('/auth/login')
+        } catch (error) {
+            res.json({
+                "message" : error.message
+            })
+        }
     }
     async login (req , res) {
         const body = req.body

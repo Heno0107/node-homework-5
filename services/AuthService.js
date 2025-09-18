@@ -1,33 +1,26 @@
-const fs = require('fs').promises
-const path = require('path')
-const { connectDb , getDb } = require('../db')
 const { ObjectId } = require('mongodb')
 const bcrypt = require('bcryptjs')
 
-let myDb
-
-connectDb(() => {
-    myDb = getDb()
-})
-
 class AuthService {
+    constructor (models) {
+        this.models = models
+    }
     async register (body) {
-        const user = await myDb.collection('users').findOne({email : body.email})
-        if (!user) {
-            await myDb.collection('users').insertOne(body)
-        }
+        const newUser = await this.models.users(body)
+        const user = await newUser.save()
+        return user
     }
     async login (body) {
-        const user = await myDb.collection('users').findOne({email : body.email})
+        const user = await this.models.users.findOne({email : body.email})
         if (user) {
             if (bcrypt.compare(body.password , user.password)) {
-                await myDb.collection('users').updateOne({_id : new ObjectId(user._id)}, {$set : {loggedIn : true}})
+                await this.models.users.findOneAndUpdate({_id : new ObjectId(user._id)}, {loggedIn : true} , {new : true})
             }
         }
     }
     async logout () {
-        const user = await myDb.collection('users').findOne({loggedIn : true})
-        await myDb.collection('users').updateOne({_id : ObjectId(user._id)}, {$set : {loggedIn : false}})
+        const user = await this.models.users.findOne({loggedIn : true})
+        await this.models.users.findOneAndUpdate({_id : new ObjectId(user._id)}, {loggedIn : false})
     }
 }
 
