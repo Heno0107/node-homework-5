@@ -1,5 +1,4 @@
 const { schema } = require("../schema/registerSchema")
-const bcrypt = require('bcryptjs')
 
 const bodyChange = async (req , res , next) => {
     try {
@@ -17,7 +16,7 @@ const bodyChange = async (req , res , next) => {
             name : filteredName ,
             age ,
             email ,
-            password : await bcrypt.hash(password , 10)
+            password
         }
         next()
     } catch (error) {

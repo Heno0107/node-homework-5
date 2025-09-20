@@ -6,8 +6,8 @@ const { UsersService } = require('./services/UsersService')
 const { AuthService } = require('./services/AuthService')
 const mongoose = require('mongoose')
 const models = require('./models')
-
-mongoose.connect("mongodb://localhost:27017/usersDb")
+// "mongodb+srv://HenoJS:heno2008@cluster0.d4ahvvd.mongodb.net/usersDb?retryWrites=true&w=majority&appName=Cluster0"
+mongoose.connect("mongodb://localhost:27017/usersDb") 
   .then(() => {
     console.log('Database Connected!')
   })
